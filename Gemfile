@@ -33,7 +33,9 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  # Use RSpec to write and run BDD tests
   gem 'rspec-rails'
+  # Timecop allows us to travel through time in our tests
   gem 'timecop'
 end
 
@@ -44,22 +46,35 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # Guard runs our tests automatically
   gem 'guard'
   gem 'guard-rspec'
 end
 
 group :test do
+  # Faker generates random data for our factories
   gem 'faker'
+  # FactoryGirl provides easy factory creation and use
   gem 'factory_girl_rails'
+  # Shoulda::Matchers gives us readable matchers for our unit tests
   gem 'shoulda-matchers'
+  # DatabaseCleaner cleans up persisted test data between test runs
   gem 'database_cleaner'
+  # Fuubar formats our RSpec test runs into a progress bar
   gem 'fuubar'
+  # WebMock stubs HTTP requests in our tests
   gem 'webmock'
+  # SitePrism provides easy page model creation and use
   gem 'site_prism'
+  # Turnip allows us to run Cucumber tests on top of RSpec
   gem 'turnip'
+  # Capybara is an acceptance test framework that simulates user interaction
   gem 'capybara'
+  # Capybara::Screenshot gives us screenshots on test failures
   gem 'capybara-screenshot'
+  # Selenium::WebDriver allows us to use Selenium/WebDriver in ruby
   gem 'selenium-webdriver'
+  # Poltergeist is a PhantomJS driver for Capybara
   gem 'poltergeist'
 end
 
