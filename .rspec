@@ -2,3 +2,5 @@
 --format Fuubar
 --color
 -r turnip/rspec
+--tag ~ignore
+--tag focus
