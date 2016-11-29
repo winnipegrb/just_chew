@@ -58,7 +58,10 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   # Guard runs our tests automatically
   gem 'guard'
+  # Guard plugin for RSpec
   gem 'guard-rspec'
+  # Better Errors gives us more options when debugging errors
+  gem 'better_errors'
 end
 
 group :test do
