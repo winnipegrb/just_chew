@@ -62,6 +62,8 @@ group :development do
   gem 'guard-rspec'
   # Better Errors gives us more options when debugging errors
   gem 'better_errors'
+  # More features for better_errors
+  gem 'binding_of_caller'
 end
 
 group :test do
