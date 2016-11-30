@@ -1,10 +1,13 @@
 doctype html
 html
   head
-    title Ecommerce Starter
+    title = content_for(:title) || 'Ecommerce Starter'
     = csrf_meta_tags
 
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-  body
-    = yield
+  body class=[controller_name, action_name]
+    #wrapper
+      = render partial: 'layouts/header'
+      #main.container = yield
+      = render partial: 'layouts/footer'

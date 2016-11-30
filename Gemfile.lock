@@ -44,6 +44,12 @@ GEM
     arel (7.1.4)
     autoprefixer-rails (6.5.3)
       execjs
+    better_errors (2.1.1)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
+      rack (>= 0.9.0)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
     bootstrap (4.0.0.alpha5)
       autoprefixer-rails (>= 6.0.3)
       sass (>= 3.4.19)
@@ -86,6 +92,8 @@ GEM
     faker (1.6.6)
       i18n (~> 0.5)
     ffi (1.9.14)
+    font-awesome-rails (4.7.0.0)
+      railties (>= 3.2, < 5.1)
     formatador (0.2.5)
     fuubar (2.2.0)
       rspec-core (~> 3.0)
@@ -279,6 +287,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  better_errors
+  binding_of_caller
   bootstrap
   byebug
   capybara
@@ -287,6 +297,7 @@ DEPENDENCIES
   database_cleaner
   factory_girl_rails
   faker
+  font-awesome-rails
   fuubar
   guard
   guard-rspec

@@ -31,6 +31,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 # Use bootstrap for building a pretty front-end
 gem 'bootstrap'
+# Use font-awesome for icons glyphs
+gem 'font-awesome-rails'
 # Rails assets gems are sourced from bower packages
 source 'https://rails-assets.org' do
   # Tether provides tooltip support to bootstrap
@@ -58,7 +60,12 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   # Guard runs our tests automatically
   gem 'guard'
+  # Guard plugin for RSpec
   gem 'guard-rspec'
+  # Better Errors gives us more options when debugging errors
+  gem 'better_errors'
+  # More features for better_errors
+  gem 'binding_of_caller'
 end
 
 group :test do
