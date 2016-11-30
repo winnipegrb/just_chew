@@ -31,6 +31,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 # Use bootstrap for building a pretty front-end
 gem 'bootstrap'
+# Use font-awesome for icons glyphs
+gem 'font-awesome-rails'
 # Rails assets gems are sourced from bower packages
 source 'https://rails-assets.org' do
   # Tether provides tooltip support to bootstrap
