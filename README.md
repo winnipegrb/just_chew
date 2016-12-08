@@ -13,3 +13,39 @@ In order to run this app, you will need:
 3. SQLite3 for your development database.
 
 4. PhantomJS for running acceptance tests.
+
+## Getting Started
+
+Here's how you get the app running:
+
+1. Install project gems with `bundler`:
+
+  ```sh
+  bundle install
+  ```
+
+2. Create your development database:
+
+  ```sh
+  bundle exec rake db:migrate
+  ```
+
+3. Create your test database:
+
+  ```sh
+  bundle exec rake db:test:prepare
+  ```
+
+4. Run the `rspec` test suite:
+
+  ```sh
+  bundle exec rspec
+  ```
+
+5. Start the development server:
+
+  ```sh
+  rails server
+  ```
+
+6. Navigate to http://localhost:3000/ to view the site!
