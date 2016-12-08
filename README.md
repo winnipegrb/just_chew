@@ -6,13 +6,34 @@ Just Chew is the starter project for the [Winnipeg Ruby User Group](http://winni
 
 In order to run this app, you will need:
 
-1. Ruby `2.3.1` with the `bundler` gem installed. We recommend using rbenv for manging your ruby versions.
+1. Ruby `2.3.1` with the `bundler` gem installed. We recommend using [rbenv](https://github.com/rbenv/rbenv) for manging your ruby versions:
 
-2. A JavaScript runtime for Ruby on Rails. Node is commonly used for this.
+  ```sh
+  rbenv install 2.3.1
+  rbenv shell 2.3.1
+  gem install bundler
+  ```
 
-3. SQLite3 for your development database.
+2. A JavaScript runtime for Ruby on Rails. [Node](https://nodejs.org/en/) is commonly used for this.
 
-4. PhantomJS for running acceptance tests.
+  ```sh
+  brew install node           # On OSX
+  sudo apt-get install nodejs # On Debian-like
+  ```
+
+3. [SQLite](https://sqlite.org/) for your development database.
+
+  ```sh
+  brew install sqlite3             # On OSX
+  sudo apt-get install sqlite3-dev # On Debian-like
+  ```
+
+4. [PhantomJS](http://phantomjs.org/) for running acceptance tests.
+
+  ```sh
+  brew install phnatomjs         # On OSX
+  sudo apt-get install phnatomjs # On Debian-like
+  ```
 
 ## Getting Started
 
