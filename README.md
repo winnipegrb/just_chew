@@ -85,6 +85,14 @@ Here's how you get the app running:
 
 6. Navigate to `http://localhost:3000/` to view the site!
 
+## A Note for Windows Users
+
+Ruby 2 has SSL certificate issues on Windows. [Read this](https://gist.github.com/fnichol/867550) to fix them.
+
+Gems with native extensions require [DevKit](https://github.com/oneclick/rubyinstaller/wiki/Development-Kit) to build C extensions.
+
+Due to so many inherent problems with Ruby on Windows, consider using a UNIX-like OS via [Vagrant](https://www.vagrantup.com/), [Docker](https://www.docker.com/), or similar.
+
 ## License
 
 This project is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
