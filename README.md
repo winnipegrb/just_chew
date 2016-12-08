@@ -1,6 +1,8 @@
 # Just Chew
 
-Just Chew is the starter project for the [Winnipeg Ruby User Group](http://winnipegrb.org/) lab meetups. Code along with us and learn something new! This app is a clone of food order/delivery services such as [Just Eat](https://www.just-eat.ca/) or [Skip The Dishes](https://www.skipthedishes.com/) and is built for educational purposes only.
+Just Chew is the starter project for the [Winnipeg Ruby User Group](http://winnipegrb.org/) lab meetups. Code along with us and learn something new! You can find the schedule for our next lab over on our [meetup page](https://www.meetup.com/winnipegrb/).
+
+This app is a clone of food order/delivery services such as [Just Eat](https://www.just-eat.ca/) or [Skip The Dishes](https://www.skipthedishes.com/). This project is built for educational purposes only.
 
 ## Prerequisites
 
@@ -14,24 +16,24 @@ In order to run this app, you will need:
   gem install bundler
   ```
 
-2. A JavaScript runtime for Ruby on Rails. [Node](https://nodejs.org/en/) is commonly used for this.
+2. A JavaScript runtime for Ruby on Rails. [Node](https://nodejs.org/en/) is commonly used for this:
 
   ```sh
-  brew install node           # On OSX
+  brew install node           # On macOS
   sudo apt-get install nodejs # On Debian-like
   ```
 
-3. [SQLite](https://sqlite.org/) for your development database.
+3. [SQLite](https://sqlite.org/) for running your development and test databases:
 
   ```sh
-  brew install sqlite3             # On OSX
+  brew install sqlite3             # On macOS
   sudo apt-get install sqlite3-dev # On Debian-like
   ```
 
-4. [PhantomJS](http://phantomjs.org/) for running acceptance tests.
+4. [PhantomJS](http://phantomjs.org/) for running acceptance tests:
 
   ```sh
-  brew install phnatomjs         # On OSX
+  brew install phnatomjs         # On macOS
   sudo apt-get install phnatomjs # On Debian-like
   ```
 
@@ -69,8 +71,8 @@ Here's how you get the app running:
   rails server
   ```
 
-6. Navigate to http://localhost:3000/ to view the site!
+6. Navigate to `http://localhost:3000/` to view the site!
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+This project is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
