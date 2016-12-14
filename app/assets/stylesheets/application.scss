@@ -18,7 +18,4 @@
 
 @import 'layout';
 @import 'fa-custom';
-
-body.application.welcome {
-  .welcome { text-align: center; }
-}
+@import 'application/*';
