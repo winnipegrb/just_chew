@@ -9,5 +9,19 @@ body.application.welcome {
 
     max-height: 512px;
     margin-top: 20px;
+
+    h1     { font-weight: bold; }
+    h2, h3 { font-weight: normal; }
+    h1, h2, h3, p {
+      text-align: center;
+      color: #FFF;
+    }
+
+    form {
+      margin-top: 6rem;
+      text-align: center;
+      input { font-size: 2rem; }
+      .btn  { margin-left: 6px; }
+    }
   }
 }
