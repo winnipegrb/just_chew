@@ -24,4 +24,11 @@ body.application.welcome {
       .btn  { margin-left: 6px; }
     }
   }
+
+  #cards {
+    .card {
+      padding-top: 1.25rem;
+      .card-icon-top, .card-title { text-align: center; }
+    }
+  }
 }
