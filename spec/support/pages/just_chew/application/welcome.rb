@@ -9,6 +9,7 @@ module JustChew::Spec::Application::Welcome
   end
 
   class Page < JustChew::Spec::Page
+    include JustChew::Spec::Layouts::Application
     set_url %q(/)
 
     section  :banner, Banner, '#main-banner'
