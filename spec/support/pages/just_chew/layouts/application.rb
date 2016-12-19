@@ -20,7 +20,7 @@ module JustChew::Spec::Layouts
       end
 
       section :social_media, SocialMedia, '#social-media'
-      element :copy, '#copy'
+      element :copyleft, '#copyleft'
     end
 
     included do
