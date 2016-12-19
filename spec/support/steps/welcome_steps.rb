@@ -7,6 +7,18 @@ module WelcomeSteps
     expect(@page).to be_displayed
   end
 
+  step 'I should see the welcome page cards' do
+    expect(@page).to have_cards(count: 3)
+    @page.cards.tap do |cards|
+      %i(dollar rocket clock-o).zip(
+        ['No Extra Cost', 'Fast Delivery', 'Time Saved'], cards
+      ).each do |icon, title, card|
+        expect(card).to have_fa_icon(icon)
+        expect(card).to have_block_title(text: title)
+      end
+    end
+  end
+
   step 'I should see the page header' do
     expect(@page).to have_header
   end
