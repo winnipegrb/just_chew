@@ -29,7 +29,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-# Use SimpleForm for easier form building 
+# Use SimpleForm for easier form building
 gem 'simple_form'
 # Use bootstrap for building a pretty front-end
 gem 'bootstrap'
@@ -49,6 +49,8 @@ group :development, :test do
   gem 'byebug', platform: :mri
   # Use RSpec to write and run BDD tests
   gem 'rspec-rails'
+  # Use RSpec controller testing extensions to assert view logic
+  gem 'rails-controller-testing'
   # Timecop allows us to travel through time in our tests
   gem 'timecop'
 end
