@@ -6,6 +6,12 @@ module JustChew::Spec::Application::Welcome
   end
 
   class Card < JustChew::Spec::Section
+    element :icon, '.card-icon-top .fa'
+    element :block_title, '.card-block .card-title'
+
+    def has_fa_icon?(fa_icon)
+      icon[:class].include? "fa-#{fa_icon}"
+    end
   end
 
   class Page < JustChew::Spec::Page
@@ -13,6 +19,6 @@ module JustChew::Spec::Application::Welcome
     set_url %q(/)
 
     section  :banner, Banner, '#main-banner'
-    sections :cards,  Card,   '#card'
+    sections :cards,  Card,   '.card'
   end
 end
