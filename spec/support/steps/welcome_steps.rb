@@ -34,4 +34,26 @@ module WelcomeSteps
       end
     end
   end
+
+  step 'I should see the page footer' do
+    expect(@page).to have_footer
+  end
+
+  step 'I should see the page footer social media links' do
+    @page.footer.tap do |footer|
+      expect(footer).to have_social_media
+      footer.social_media.tap do |social_media|
+        expect(social_media).to have_links(count: 3)
+        expect(social_media).to have_twitter
+        expect(social_media).to have_facebook
+        expect(social_media).to have_google_plus
+      end
+    end
+  end
+
+  step 'I should see the page footer copyleft' do
+    @page.footer.tap do |footer|
+      expect(footer).to have_copyleft(text: '2016')
+    end
+  end
 end
