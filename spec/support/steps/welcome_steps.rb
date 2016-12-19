@@ -19,6 +19,24 @@ module WelcomeSteps
     end
   end
 
+  step 'I should see the welcome page banner' do
+    expect(@page).to have_banner
+    @page.banner.tap do |banner|
+      expect(banner.has_title?).to be true
+      expect(banner).to have_subtitle
+    end
+  end
+
+  step 'I should see the welcome page banner form' do
+    expect(@page.banner).to have_form
+    @page.banner.form.tap do |form|
+      expect(form).to have_address
+      expect(form.address[:placeholder]).to eq '123 Fake St.'
+      expect(form).to have_submit
+      expect(form.submit[:value]).to eq 'Go'
+    end
+  end
+
   step 'I should see the page header' do
     expect(@page).to have_header
   end
