@@ -34,6 +34,10 @@ module WelcomeSteps
       expect(form.address[:placeholder]).to eq '123 Fake St.'
       expect(form).to have_submit
       expect(form.submit[:value]).to eq 'Go'
+      form.root_element.tap do |form_elem|
+        expect(form_elem[:method]).to eq 'get'
+        expect(form_elem[:class]).to include 'form-inline'
+      end
     end
   end
 
@@ -47,6 +51,7 @@ module WelcomeSteps
       header.logo.tap do |logo|
         expect(logo[:width]).to eq 80
         expect(logo[:height]).to eq 40
+        expect(logo[:alt]).to eq 'Logo'
         expect(logo[:src]).to match 'assets/logo-.*.png'
       end
     end
@@ -61,6 +66,9 @@ module WelcomeSteps
       end
       header.log_in.tap do |log_in|
         expect(log_in[:href]).to match '#'
+        log_in.find(:xpath, '..').tap do |nav_item|
+          expect(nav_item[:class]).to include 'float-xs-right'
+        end
       end
     end
   end
@@ -74,6 +82,7 @@ module WelcomeSteps
       expect(footer).to have_social_media
       footer.social_media.tap do |social_media|
         expect(social_media).to have_links(count: 3)
+        expect(social_media).to have_icons(class: 'fa-2x')
         expect(social_media).to have_twitter
         expect(social_media).to have_facebook
         expect(social_media).to have_google_plus
@@ -83,7 +92,7 @@ module WelcomeSteps
 
   step 'I should see the page footer copyleft' do
     @page.footer.tap do |footer|
-      expect(footer).to have_copyleft(text: '2016')
+      expect(footer).to have_copyleft(text: Time.now.year)
     end
   end
 end
