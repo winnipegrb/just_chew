@@ -1,6 +1,6 @@
 #main-banner
   h1.display-3 Order delivery or take-out!
-  h2.display-4 Choose from a variety of local resturants
+  h2.display-4 Choose from a variety of local restaurants
   = simple_form_for :search, method: :get, html: { class: 'form-inline' } do |f|
     = f.input :query, label: false, placeholder: '123 Fake St.'
     = f.button :submit, 'Go', class: 'btn btn-primary'
