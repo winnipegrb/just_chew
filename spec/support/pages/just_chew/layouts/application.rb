@@ -14,6 +14,7 @@ module JustChew::Spec::Layouts
 
       class SocialMedia < SitePrism::Section
         elements :links,       '.navbar .nav-link'
+        element  :icons,       '.navbar .nav-link .fa'
         element  :twitter,     '.navbar .nav-link .fa-twitter'
         element  :facebook,    '.navbar .nav-link .fa-facebook'
         element  :google_plus, '.navbar .nav-link .fa-google-plus'

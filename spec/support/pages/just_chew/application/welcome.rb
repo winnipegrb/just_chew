@@ -9,7 +9,7 @@ module JustChew::Spec::Application::Welcome
 
   class Banner < JustChew::Spec::Section
     element :title,    'h1', text: 'Order delivery or take-out!'
-    element :subtitle, 'h2', text: 'Choose from a variety of local resturants'
+    element :subtitle, 'h2', text: 'Choose from a variety of local restaurants'
     section :form, AddressForm, 'form'
   end
 
