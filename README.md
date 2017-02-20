@@ -44,8 +44,8 @@ In order to run this app, you will need:
 4. [PhantomJS](http://phantomjs.org/) for running acceptance tests:
 
   ```sh
-  brew install phnatomjs         # On macOS
-  sudo apt-get install phnatomjs # On Debian-like
+  brew install phantomjs         # On macOS
+  sudo apt-get install phantomjs # On Debian-like
   choco install phantomjs        # On Windows
   ```
 
