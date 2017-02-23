@@ -1,0 +1,10 @@
+site 'http://community.opscode.com/api/v1'
+
+cookbook 'apt'
+cookbook 'build-essential'
+cookbook 'vim'
+cookbook 'nodejs'
+cookbook 'phantomjs2'
+cookbook 'ruby_build'
+cookbook 'ruby_rbenv'
+cookbook 'postgresql', '6.0.1'
