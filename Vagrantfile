@@ -19,6 +19,7 @@ Vagrant.configure('2') do |config|
 
   # Use Chef Solo to provision our virtual machine
   config.vm.provision :chef_solo do |chef|
+    chef.channel        = 'stable'
     chef.cookbooks_path = %w(cookbooks)
 
     chef.add_recipe 'apt'
