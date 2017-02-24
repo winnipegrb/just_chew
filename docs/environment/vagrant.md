@@ -22,3 +22,5 @@ In order to get your vagrant box setup, do the following:
   vagrant ssh
   cd /vagrant
   ```
+
+NOTE: If you experience problems provisioning with chef, try upgrading vagrant to the [latest version](https://www.vagrantup.com/downloads.html).
