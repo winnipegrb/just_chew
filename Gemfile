@@ -15,7 +15,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 
 # Use Slim for view templating
 gem 'slim-rails'
@@ -93,6 +93,7 @@ group :test do
   gem 'selenium-webdriver'
   # Poltergeist is a PhantomJS driver for Capybara
   gem 'poltergeist'
+	gem 'phantomjs', :require => 'phantomjs/poltergeist'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

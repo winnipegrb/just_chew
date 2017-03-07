@@ -9,6 +9,7 @@ This app is a clone of food order/delivery services such as [Just Eat](https://w
 We support the following environment setups:
 
 - [Vagrant](docs/environment/vagrant.md)
+- [Docker](docs/environment/docker.md)
 - [Manual (DIY)](docs/environment/manual.md)
 
 ## Getting Started
