@@ -2,8 +2,7 @@
 
 ## Docker
 
-Refer [Install Docker Engine](https://docs.docker.com/engine/installation/) to have docker installed in your dev machine
-
+Refer to the [installation docs](https://docs.docker.com/engine/installation/) to have Docker installed in your development machine. Then, run the following:
 
 1. Build image:
 
