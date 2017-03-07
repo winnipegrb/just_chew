@@ -2,7 +2,9 @@
 
 ## Docker
 
-Refer [Install Dcoker Engine](https://docs.docker.com/engine/installation/)  to have docker installed in your dev machine
+Refer [Install Docker Engine](https://docs.docker.com/engine/installation/) to have docker installed in your dev machine
+
+
 1. Build image:
 
   ```sh
@@ -21,5 +23,4 @@ Refer [Install Dcoker Engine](https://docs.docker.com/engine/installation/)  to 
   docker-compose run web bundle exec rspec
   ```
 
-NOTE: On Windows, mount directories using:
-docker run -v //c/<path>:/<container path>
+NOTE: When installing new gems, you will have to rebuild the docker image by re-running `docker-compose build`.
