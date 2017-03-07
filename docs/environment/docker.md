@@ -23,3 +23,5 @@ Refer to the [installation docs](https://docs.docker.com/engine/installation/) t
   ```
 
 NOTE: When installing new gems, you will have to rebuild the docker image by re-running `docker-compose build`.
+
+NOTE: If you are having trouble with volumes on Windows, try setting COMPOSE_CONVERT_WINDOWS_PATHS to 0 in your environment. (eg. `set COMPOSE_CONVERT_WINDOWS_PATHS=0`)
