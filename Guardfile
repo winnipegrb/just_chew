@@ -69,7 +69,7 @@ guard :rspec, cmd: "bundle exec rspec" do
   end
 end
 
-guard 'livereload' do
+guard :livereload do
   extensions = {
     css: :css,
     scss: :css,
