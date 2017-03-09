@@ -62,6 +62,10 @@ group :development do
   gem 'guard'
   # Guard plugin for RSpec
   gem 'guard-rspec'
+  # Guard plugin to reload browser
+  gem 'guard-livereload', '~> 2.5', require: false
+  # Injects livereload.js
+  gem 'rack-livereload'
   # Better Errors gives us more options when debugging errors
   gem 'better_errors'
   # More features for better_errors
