@@ -44,6 +44,7 @@ GEM
     arel (7.1.4)
     autoprefixer-rails (6.5.3)
       execjs
+    bcrypt (3.1.11)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -67,6 +68,10 @@ GEM
       launchy
     childprocess (0.5.9)
       ffi (~> 1.0, >= 1.0.11)
+    clearance (1.16.0)
+      bcrypt
+      email_validator (~> 1.4)
+      rails (>= 3.1)
     cliver (0.3.2)
     coderay (1.1.1)
     coffee-rails (4.2.1)
@@ -85,6 +90,8 @@ GEM
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
+    email_validator (1.6.0)
+      activemodel
     erubis (2.7.0)
     eventmachine (1.2.3)
     execjs (2.7.0)
@@ -318,6 +325,7 @@ DEPENDENCIES
   byebug
   capybara
   capybara-screenshot
+  clearance
   coffee-rails (~> 4.2)
   database_cleaner
   factory_girl_rails
@@ -360,4 +368,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.13.6
+   1.14.6
