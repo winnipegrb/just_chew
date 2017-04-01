@@ -167,6 +167,7 @@ GEM
     notiffany (0.1.1)
       nenv (~> 0.1)
       shellany (~> 0.0)
+    pg (0.18.4)
     phantomjs (2.1.1.0)
     poltergeist (1.11.0)
       capybara (~> 2.1)
@@ -280,7 +281,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.3.12)
     temple (0.7.7)
     therubyracer (0.12.3)
       libv8 (~> 3.16.14.15)
@@ -338,6 +338,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
+  pg
   phantomjs
   poltergeist
   puma (~> 3.0)
@@ -354,7 +355,6 @@ DEPENDENCIES
   slim-rails
   spring
   spring-watcher-listen (~> 2.0.0)
-  sqlite3
   therubyracer
   timecop
   turbolinks (~> 5)
