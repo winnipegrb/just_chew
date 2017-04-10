@@ -1,0 +1,12 @@
+#clearance.password-reset
+  h2 = t('.title')
+
+  p = t('.description')
+  
+  - user_password_path(@user, token: @user.confirmation_token).tap do |path|
+    = simple_form_for :password_reset, url: path, html: { method: :put } do |f|
+      .form-group
+        = f.input :password
+
+      .form-group
+        = f.button :submit
