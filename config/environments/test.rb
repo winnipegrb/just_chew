@@ -40,6 +40,9 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
+  # Use backdoor middleware to allow logins via "as" query param
+  config.middleware.use Clearance::BackDoor
+
   # Add action mailer default host
   config.action_mailer.default_url_options = { host: 'test.justchew.com' }
 end

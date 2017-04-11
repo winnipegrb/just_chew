@@ -12,6 +12,7 @@ require 'factory_girl_rails'
 require 'database_cleaner'
 require 'shoulda/matchers'
 require 'webmock/rspec'
+require 'clearance/rspec'
 
 require 'turnip/capybara'
 require 'capybara/rspec'
