@@ -54,4 +54,7 @@ Rails.application.configure do
 
   # Inject livereload.js into HTML pages
   config.middleware.insert_before ActionDispatch::DebugExceptions, Rack::LiveReload, no_swf: true
+
+  # Add action mailer default host
+  config.action_mailer.default_url_options = { host: 'dev.justchew.com' }
 end
