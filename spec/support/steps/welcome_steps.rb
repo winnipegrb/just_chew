@@ -64,10 +64,19 @@ module WelcomeSteps
       header.home.tap do |home|
         expect(home[:href]).to match '/'
       end
-      header.log_in.tap do |log_in|
-        expect(log_in[:href]).to match '#'
-        log_in.find(:xpath, '..').tap do |nav_item|
-          expect(nav_item[:class]).to include 'float-xs-right'
+      if @user.try(:persisted?)
+        header.sign_out.tap do |sign_out|
+          expect(sign_out[:href]).to include sign_out_path
+          sign_out.find(:xpath, '..').tap do |nav_item|
+            expect(nav_item[:class]).to include 'float-xs-right'
+          end
+        end
+      else
+        header.sign_in.tap do |sign_in|
+          expect(sign_in[:href]).to include sign_in_path
+          sign_in.find(:xpath, '..').tap do |nav_item|
+            expect(nav_item[:class]).to include 'float-xs-right'
+          end
         end
       end
     end
