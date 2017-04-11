@@ -1,12 +1,6 @@
 module WelcomeSteps
   extend SpecSteps
 
-  step 'I be/land on the welcome page' do
-    @page = JustChew::Spec::Application::Welcome::Page.new
-    @page.load
-    expect(@page).to be_displayed
-  end
-
   step 'I should see the welcome page cards' do
     expect(@page).to have_cards(count: 3)
     @page.cards.tap do |cards|
