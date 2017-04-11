@@ -7,5 +7,9 @@ header.main
         = link_to root_path, class: 'nav-link'
           | Home
       li.nav-item.float-xs-right
-        = link_to '#', class: 'nav-link'
-          | Log In
+        - if signed_in?
+          = link_to sign_out_path, method: :delete, class: 'nav-link'
+            = t('layouts.application.sign_out')
+        - else
+          = link_to sign_in_path, class: 'nav-link'
+            = t('layouts.application.sign_in')
