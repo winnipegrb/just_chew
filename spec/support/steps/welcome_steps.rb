@@ -43,6 +43,9 @@ module WelcomeSteps
     @page.header.tap do |header|
       expect(header).to have_logo
       header.logo.tap do |logo|
+        logo.find(:xpath, '..').tap do |logo_link|
+          expect(logo_link[:href]).to end_with root_path
+        end
         expect(logo[:width]).to eq 80
         expect(logo[:height]).to eq 40
         expect(logo[:alt]).to eq 'Logo'
@@ -56,14 +59,14 @@ module WelcomeSteps
       expect(header).to have_items(count: 1)
       if @user.try(:persisted?)
         header.sign_out.tap do |sign_out|
-          expect(sign_out[:href]).to include sign_out_path
+          expect(sign_out[:href]).to end_with sign_out_path
           sign_out.find(:xpath, '..').tap do |nav_item|
             expect(nav_item[:class]).to include 'float-xs-right'
           end
         end
       else
         header.sign_in.tap do |sign_in|
-          expect(sign_in[:href]).to include sign_in_path
+          expect(sign_in[:href]).to end_with sign_in_path
           sign_in.find(:xpath, '..').tap do |nav_item|
             expect(nav_item[:class]).to include 'float-xs-right'
           end
