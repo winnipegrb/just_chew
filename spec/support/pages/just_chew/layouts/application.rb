@@ -6,7 +6,6 @@ module JustChew::Spec::Layouts
     class Header < SitePrism::Section
       element  :logo,     '.navbar-brand img'
       elements :items,    '.navbar-nav .nav-item'
-      element  :home,     '.navbar-nav .nav-link', text: 'Home'
       element  :sign_in,  '.navbar-nav .nav-link', text: 'Sign in'
       element  :sign_out, '.navbar-nav .nav-link', text: 'Sign out'
     end

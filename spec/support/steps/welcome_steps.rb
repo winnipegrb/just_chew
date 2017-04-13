@@ -53,11 +53,7 @@ module WelcomeSteps
 
   step 'I should see the page header items' do
     @page.header.tap do |header|
-      expect(header).to have_items(count: 2)
-      expect(header).to have_home
-      header.home.tap do |home|
-        expect(home[:href]).to match '/'
-      end
+      expect(header).to have_items(count: 1)
       if @user.try(:persisted?)
         header.sign_out.tap do |sign_out|
           expect(sign_out[:href]).to include sign_out_path
