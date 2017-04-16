@@ -2,6 +2,10 @@ require 'rails_helper'
 
 RSpec.describe ProfilesController, type: :controller do
 
+  # NOTE: This allows us to assert partials. Typically
+  # you would not need this in your controller tests.
+  render_views
+
   let(:user) { create :user }
 
   describe 'GET #show' do
@@ -25,6 +29,7 @@ RSpec.describe ProfilesController, type: :controller do
       it { should respond_with :success }
 
       it { should render_template :show }
+      it { should render_template :_form }
     end
   end
 
@@ -60,6 +65,7 @@ RSpec.describe ProfilesController, type: :controller do
         it { should respond_with :success }
 
         it { should render_template :show }
+        it { should render_template :_form }
 
         it 'should update user' do
           expect(attrs).to eq assigned_attrs
@@ -81,6 +87,7 @@ RSpec.describe ProfilesController, type: :controller do
         it { should respond_with :unprocessable_entity }
 
         it { should render_template :show }
+        it { should render_template :_form }
 
         it 'should not update user' do
           expect(attrs).to_not eq assigned_attrs
