@@ -56,19 +56,23 @@ module WelcomeSteps
 
   step 'I should see the page header items' do
     @page.header.tap do |header|
-      expect(header).to have_items(count: 1)
+      expect(header).to have_items(count: 2)
       if @user.try(:persisted?)
-        header.sign_out.tap do |sign_out|
-          expect(sign_out[:href]).to end_with sign_out_path
-          sign_out.find(:xpath, '..').tap do |nav_item|
-            expect(nav_item[:class]).to include 'float-xs-right'
+        %i(profile sign_out).each do |item_sym|
+          header.send(item_sym).tap do |item|
+            expect(item[:href]).to end_with send(:"#{item_sym}_path")
+            item.find(:xpath, '../..').tap do |nav_item|
+              expect(nav_item[:class]).to include 'float-xs-right'
+            end
           end
         end
       else
-        header.sign_in.tap do |sign_in|
-          expect(sign_in[:href]).to end_with sign_in_path
-          sign_in.find(:xpath, '..').tap do |nav_item|
-            expect(nav_item[:class]).to include 'float-xs-right'
+        %i(sign_in sign_up).each do |item_sym|
+          header.send(item_sym).tap do |item|
+            expect(item[:href]).to end_with send(:"#{item_sym}_path")
+            item.find(:xpath, '../..').tap do |nav_item|
+              expect(nav_item[:class]).to include 'float-xs-right'
+            end
           end
         end
       end

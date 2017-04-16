@@ -8,6 +8,8 @@ module JustChew::Spec::Layouts
       elements :items,    '.navbar-nav .nav-item'
       element  :sign_in,  '.navbar-nav .nav-link', text: 'Sign in'
       element  :sign_out, '.navbar-nav .nav-link', text: 'Sign out'
+      element  :sign_up,  '.navbar-nav .nav-link', text: 'Sign up'
+      element  :profile,  '.navbar-nav .nav-link', text: 'Profile'
     end
 
     class Footer < SitePrism::Section
