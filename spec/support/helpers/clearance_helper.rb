@@ -1,48 +1,47 @@
 module ClearanceHelper
   extend SpecHelper
 
-  def reset_password_for(email)
-    visit new_password_path
-    fill_in 'password_email', with: email
-    click_button I18n.t('helpers.submit.password.submit')
+  def reset_password_for(user = {})
+    JustChew::Spec::Clearance::Password::New::Page.new.load do |page|
+      return page.reset_password user
+    end
   end
 
   def sign_in
-    password = 'password'
-    user     = FactoryGirl.create(:user, password: password)
-    sign_in_with user.email, password
+    sign_in_with create(:user)
   end
 
-  def sign_in_with(email, password)
-    visit sign_in_path
-    fill_in 'session_email', with: email
-    fill_in 'session_password', with: password
-    click_button I18n.t('helpers.submit.session.submit')
+  def sign_in_with(user = {})
+    JustChew::Spec::Clearance::SignIn::Page.new.load do |page|
+      page.sign_in user
+    end
   end
 
   def sign_out
-    click_link I18n.t('layouts.application.sign_out')
+    JustChew::Spec::Application::Welcome::Page.new.load do |page|
+      page.header.sign_out.click
+    end
   end
 
-  def sign_up_with(email, password)
-    visit sign_up_path
-    fill_in 'user_email', with: email
-    fill_in 'user_password', with: password
-    click_button I18n.t('helpers.submit.user.create')
+  def sign_up_with(user = {})
+    JustChew::Spec::Clearance::SignUp::Page.new.load do |page|
+      page.sign_up user
+    end
   end
 
   def expect_user_to_be_signed_in
-    visit root_path
-    expect(page).to have_link I18n.t('layouts.application.sign_out')
+    JustChew::Spec::Application::Welcome::Page.new.load do |page|
+      expect(page.header).to have_sign_out
+    end
   end
 
   def expect_user_to_be_signed_out
-    expect(page).to have_content I18n.t('layouts.application.sign_in')
+    JustChew::Spec::Application::Welcome::Page.new.load do |page|
+      expect(page.header).to have_sign_in
+    end
   end
 
   def user_with_reset_password
-    user = FactoryGirl.create(:user)
-    reset_password_for user.email
-    user.reload
+    reset_password_for create(:user)
   end
 end

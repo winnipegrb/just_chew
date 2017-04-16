@@ -26,7 +26,7 @@ RSpec.feature 'Visitor resets password', js: true do
   end
 
   scenario 'with non-user account' do
-    reset_password_for 'unknown.email@example.com'
+    reset_password_for email: 'unknown.email@example.com'
 
     expect_page_to_display_change_password_message
     expect_mailer_to_have_no_deliveries
