@@ -18,6 +18,10 @@ gem 'coffee-rails', '~> 4.2'
 gem 'therubyracer', platforms: :ruby
 # Use clearance for user authentication
 gem 'clearance'
+# Use carrierwave for file uploads
+gem 'carrierwave', '~> 1.0'
+# Use minimagick for image processing
+gem 'mini_magick'
 
 # Use Slim for view templating
 gem 'slim-rails'
