@@ -23,3 +23,6 @@
 # Ignore vagrant files
 /.vagrant
 /cookbooks
+
+# Ignore file uploads
+/public/uploads
