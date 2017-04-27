@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   root to: 'application#welcome'
 
   resource :profile, only: %i(show update)
+
+  resources :restaurants, only: %i(index)
 end
