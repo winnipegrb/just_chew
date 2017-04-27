@@ -5,7 +5,9 @@ class LogoUploader < ApplicationUploader
   end
 
   def default_url
-    '/images/default/' + [version_name, 'logo.png'].compact.join('_')
+    ActionController::Base.helpers.asset_path(
+      'default/' + [version_name, 'logo.png'].compact.join('_')
+    )
   end
 
   version :thumb do
