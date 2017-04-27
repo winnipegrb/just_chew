@@ -22,6 +22,8 @@ gem 'clearance'
 gem 'carrierwave', '~> 1.0'
 # Use minimagick for image processing
 gem 'mini_magick'
+# Use ActiveModel::Serializers for model JSON serialization
+gem 'active_model_serializers'
 
 # Use Slim for view templating
 gem 'slim-rails'
