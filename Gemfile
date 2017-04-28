@@ -24,6 +24,8 @@ gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'
 # Use ActiveModel::Serializers for model JSON serialization
 gem 'active_model_serializers'
+# Use React.js for building view components
+gem 'react-rails'
 
 # Use Slim for view templating
 gem 'slim-rails'
