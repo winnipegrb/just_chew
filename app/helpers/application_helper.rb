@@ -6,4 +6,8 @@ module ApplicationHelper
       { icon: 'clock-o', title: 'Time Saved' }
     ]
   end
+
+  def serialize(resource, options = {})
+    ActiveModelSerializers::SerializableResource.new(resource, options)
+  end
 end
