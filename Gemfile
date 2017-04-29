@@ -26,6 +26,8 @@ gem 'mini_magick'
 gem 'active_model_serializers'
 # Use React.js for building view components
 gem 'react-rails'
+# Use js-routes for exposing named route helpers to JS
+gem 'js-routes'
 
 # Use Slim for view templating
 gem 'slim-rails'
