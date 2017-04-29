@@ -4,5 +4,7 @@ Rails.application.routes.draw do
 
   resource :profile, only: %i(show update)
 
-  resources :restaurants, only: %i(index)
+  resources :restaurants, only: %i(index) do
+    resource :menu, only: %i(show)
+  end
 end
