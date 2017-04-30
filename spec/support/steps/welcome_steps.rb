@@ -28,9 +28,9 @@ module WelcomeSteps
       expect(form.address[:placeholder]).to eq '123 Fake St.'
       expect(form).to have_submit
       expect(form.submit[:value]).to eq 'Go'
-      form.root_element.tap do |form_elem|
-        expect(form_elem[:method]).to eq 'get'
-        expect(form_elem[:class]).to include 'form-inline'
+      form.tap do |form|
+        expect(form).to have_method :post
+        expect(form[:class]).to include 'form-inline'
       end
     end
   end

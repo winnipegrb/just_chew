@@ -17,5 +17,6 @@ module JustChew::Spec
     include DSL
 
     delegate :click, to: :root_element
+    delegate :[],    to: :root_element
   end
 end
