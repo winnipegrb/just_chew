@@ -6,4 +6,8 @@ placeholder :page do
   match /restaurants/ do
     JustChew::Spec::Restaurants::Index::Page
   end
+
+  match /menu/ do
+    JustChew::Spec::Menus::Show::Page
+  end
 end
