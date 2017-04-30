@@ -4,6 +4,10 @@ Rails.application.routes.draw do
 
   resource :profile, only: %i(show update)
 
+  resource :locale, only: %i() do
+    post :find
+  end
+
   resources :restaurants, only: %i(index) do
     resource :menu, only: %i(show)
   end
