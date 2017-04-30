@@ -1,0 +1,28 @@
+#restaurants {
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .restaurant {
+    position: relative;
+    display: table;
+
+    .image {
+      img {
+        width: 64px;
+        height: 64px;
+      }
+      display: table-cell;
+      vertical-align: middle;
+      padding-bottom: 8px;
+    }
+
+    .info {
+      display: table-cell;
+      vertical-align: middle;
+      padding-left: 12px;
+    }
+  }
+}
