@@ -1,5 +1,11 @@
 module JustChew::Spec
+
+  module DSL
+    extend ActiveSupport::Concern
+  end
+
   class Page < SitePrism::Page
+    include DSL
 
     def self.set_url(page_url)
       super "#{page_url}{?query*}"
@@ -7,5 +13,7 @@ module JustChew::Spec
 
   end
 
-  class Section < SitePrism::Section; end
+  class Section < SitePrism::Section
+    include DSL
+  end
 end
