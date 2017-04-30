@@ -33,9 +33,4 @@ module PageSteps
     page_name = page.class.name.underscore.split('/').drop(2).join('_')
     :"params_for_#{page_name}"
   end
-
-  def clearance_query_params
-    if @user.try(:persisted?) then { as: @user.id } else { } end
-  end
-
 end
