@@ -16,4 +16,11 @@ module RestaurantsIndexSteps
       end
     end
   end
+
+  step 'I click a restaurant in the list' do
+    @restaurants.zip(@page.restaurants).sample.tap do |restaurant, section|
+      @restaurant = restaurant
+      section.click
+    end
+  end
 end

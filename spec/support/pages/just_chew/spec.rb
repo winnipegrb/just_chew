@@ -15,5 +15,7 @@ module JustChew::Spec
 
   class Section < SitePrism::Section
     include DSL
+
+    delegate :click, to: :root_element
   end
 end
