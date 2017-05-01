@@ -8,5 +8,9 @@ FactoryGirl.define do
     last_name  { Faker::Name.last_name }
     email
     password 'password'
+
+    after(:build) do |user, evaluator|
+      user.order_preference ||= build(:order_preference, user: user)
+    end
   end
 end
