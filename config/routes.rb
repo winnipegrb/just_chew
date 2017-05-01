@@ -4,6 +4,10 @@ Rails.application.routes.draw do
 
   resource :profile, only: %i(show update)
 
+  namespace :order do
+    resource :preference, only: %i(update)
+  end
+
   resource :locale, only: %i() do
     post :find
   end

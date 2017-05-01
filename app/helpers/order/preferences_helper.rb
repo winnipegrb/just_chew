@@ -1,0 +1,2 @@
+module Order::PreferencesHelper
+end
