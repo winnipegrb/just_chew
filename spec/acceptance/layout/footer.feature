@@ -1,9 +1,9 @@
 @javascript
-Feature: Welcome Footer
+Feature: Footer
 
-  The welcome page footer
+  The layout footer
 
-  Scenario: View the welcome page footer
+  Scenario: View the application footer
     When I land on the welcome page
     Then I should see the page footer
     And  I should see the page footer social media links

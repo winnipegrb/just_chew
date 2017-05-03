@@ -1,16 +1,16 @@
 @javascript
-Feature: Welcome Header
+Feature: Header
 
-  The welcome page header
+  The layout header
 
-  Scenario: View the welcome page header as guest
+  Scenario: View the application header as guest
     Given I am a guest
     When  I land on the welcome page
     Then  I should see the page header
     And   I should see the page header logo
     And   I should see the page header items
 
-  Scenario: View the welcome page header as user
+  Scenario: View the application header as user
     Given I am a user
     When  I land on the welcome page
     Then  I should see the page header
