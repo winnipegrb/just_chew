@@ -2,6 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Order::PreferencesController, type: :controller do
 
+  it { is_expected.to be_a ApiController }
+
   let(:user)             { create :user }
   let(:order_preference) { user.order_preference }
 

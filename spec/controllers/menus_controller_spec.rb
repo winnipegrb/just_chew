@@ -2,6 +2,8 @@ require 'rails_helper'
 
 RSpec.describe MenusController, type: :controller do
 
+  it { is_expected.to be_a OrderingController }
+
   let(:user) { create :user }
 
   let!(:restaurant) { create :restaurant }

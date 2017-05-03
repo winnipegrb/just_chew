@@ -2,6 +2,8 @@ require 'rails_helper'
 
 RSpec.describe RestaurantsController, type: :controller do
 
+  it { is_expected.to be_a OrderingController }
+
   let(:user) { create :user }
 
   describe 'GET #index' do
