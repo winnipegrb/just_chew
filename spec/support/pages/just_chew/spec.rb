@@ -2,6 +2,12 @@ module JustChew::Spec
 
   module DSL
     extend ActiveSupport::Concern
+
+    SpecHelper.helper_modules.each do |helper|
+      if helper.include_type.eql? :feature
+        include helper
+      end
+    end
   end
 
   class Page < SitePrism::Page

@@ -3,6 +3,8 @@ module JustChew::Spec::Layouts
   module Application
     extend ActiveSupport::Concern
 
+    require_relative './application/components'
+
     class Header < SitePrism::Section
       element  :logo,     '.navbar-brand img'
       elements :items,    '.navbar-nav .nav-item'
@@ -10,6 +12,7 @@ module JustChew::Spec::Layouts
       element  :sign_out, '.navbar-nav .nav-link', text: 'Sign out'
       element  :sign_up,  '.navbar-nav .nav-link', text: 'Sign up'
       element  :profile,  '.navbar-nav .nav-link', text: 'Profile'
+      section  :order_type_toggle, Components::OrderTypeToggle, '#order-preference-toggle'
     end
 
     class Footer < SitePrism::Section
