@@ -3,8 +3,12 @@ header.main
     = link_to root_path, class: 'navbar-brand'
       = image_tag 'logo.png', width: 80, height: 40
     ul.nav.navbar-nav
+      .float-xs-left
+        - if signed_in? && ordering?
+          li.nav-item
+            - order_preference_type_toggle_json.tap do |toggle_json|
+              = react_component 'Order.Preference.TypeToggle', json: toggle_json
       .float-xs-right
-        - if signed_in?
         li.nav-item
           - if signed_in?
             = link_to profile_path, class: 'nav-link'
