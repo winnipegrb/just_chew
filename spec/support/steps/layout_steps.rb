@@ -45,6 +45,12 @@ module LayoutSteps
     end
   end
 
+  step 'I :assert see the page header order type toggle' do |assert|
+    @page.header.tap do |header|
+      expect(header).send(assert, have_order_type_toggle)
+    end
+  end
+
   step 'I should see the page footer' do
     expect(@page).to have_footer
   end
