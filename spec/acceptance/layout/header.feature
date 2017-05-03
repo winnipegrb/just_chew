@@ -9,6 +9,7 @@ Feature: Header
     Then  I should see the page header
     And   I should see the page header logo
     And   I should see the page header items
+    And   I should not see the page header order type toggle
 
   Scenario: View the application header as user
     Given I am a user
@@ -16,3 +17,4 @@ Feature: Header
     Then  I should see the page header
     And   I should see the page header logo
     And   I should see the page header items
+    And   I should not see the page header order type toggle
