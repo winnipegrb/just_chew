@@ -65,6 +65,10 @@ group :development, :test do
   gem 'rails-controller-testing'
   # Timecop allows us to travel through time in our tests
   gem 'timecop'
+  # Faker generates random data for our factories
+  gem 'faker'
+  # FactoryGirl provides easy factory creation and use
+  gem 'factory_girl_rails'
 end
 
 group :development do
@@ -89,10 +93,6 @@ group :development do
 end
 
 group :test do
-  # Faker generates random data for our factories
-  gem 'faker'
-  # FactoryGirl provides easy factory creation and use
-  gem 'factory_girl_rails'
   # Shoulda::Matchers gives us readable matchers for our unit tests
   gem 'shoulda-matchers'
   # DatabaseCleaner cleans up persisted test data between test runs
