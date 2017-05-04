@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe RestaurantsController, type: :controller do
 
   it { is_expected.to be_a OrderingController }
+  it { is_expected.to have_private_method :load_restaurants }
 
   let(:user) { create :user }
 

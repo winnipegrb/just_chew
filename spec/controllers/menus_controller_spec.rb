@@ -3,6 +3,8 @@ require 'rails_helper'
 RSpec.describe MenusController, type: :controller do
 
   it { is_expected.to be_a OrderingController }
+  it { is_expected.to have_private_method :load_restaurant }
+  it { is_expected.to have_private_method :load_menu }
 
   let(:user) { create :user }
 

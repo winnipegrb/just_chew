@@ -2,6 +2,8 @@ require 'rails_helper'
 
 RSpec.describe ProfilesController, type: :controller do
 
+  it { is_expected.to have_private_method :user_params }
+
   # NOTE: This allows us to assert partials. Typically
   # you would not need this in your controller tests.
   render_views

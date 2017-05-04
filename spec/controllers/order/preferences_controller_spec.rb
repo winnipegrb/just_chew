@@ -3,6 +3,8 @@ require 'rails_helper'
 RSpec.describe Order::PreferencesController, type: :controller do
 
   it { is_expected.to be_a ApiController }
+  it { is_expected.to have_private_method :order_preference_params }
+  it { is_expected.to have_private_method :load_order_preference }
 
   let(:user)             { create :user }
   let(:order_preference) { user.order_preference }
@@ -21,7 +23,11 @@ RSpec.describe Order::PreferencesController, type: :controller do
 
     context 'as guest' do
 
-      before { put :update, params: { order_preference: attrs } }
+      before do
+        expect(controller).to_not receive(:load_order_preference)
+          .and_call_original
+        put :update, params: { order_preference: attrs }
+      end
 
       it { should respond_with :redirect }
 
@@ -36,7 +42,11 @@ RSpec.describe Order::PreferencesController, type: :controller do
 
         let(:json) { serialize(order_preference).as_json }
 
-        before { put :update, params: { order_preference: attrs } }
+        before do
+          expect(controller).to receive(:load_order_preference)
+            .and_call_original
+          put :update, params: { order_preference: attrs }
+        end
 
         it { should respond_with :success }
 
