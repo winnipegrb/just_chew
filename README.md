@@ -1,5 +1,7 @@
 # Just Chew
 
+[![Build Status](https://travis-ci.org/winnipegrb/just_chew.svg?branch=master)](https://travis-ci.org/winnipegrb/just_chew)
+
 Just Chew is the starter project for the [Winnipeg Ruby User Group](http://winnipegrb.org/) lab meetups. Code along with us and learn something new! You can find the schedule for our next lab over on our [meetup page](https://www.meetup.com/winnipegrb/).
 
 This app is a clone of food order/delivery services such as [Just Eat](https://www.just-eat.ca/) or [Skip The Dishes](https://www.skipthedishes.com/). This project is built for educational purposes only.
