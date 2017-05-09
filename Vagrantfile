@@ -17,4 +17,14 @@ Vagrant.configure('2') do |config|
     vb.name = 'just-chew'
     vb.customize ['modifyvm', :id, '--memory', '2048']
   end
+
+  config.vm.provision 'setup', type: :shell do |setup|
+    setup.privileged = false
+    setup.inline     = <<-SCRIPT
+    cd /vagrant
+    bundle install
+    bundle exec rake db:create db:migrate db:test:prepare
+    rbenv rehash
+    SCRIPT
+  end
 end
