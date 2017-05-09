@@ -18,7 +18,7 @@ Vagrant.configure('2') do |config|
   config.ssh.forward_agent = true
 
   # Forward the Rails server default port to the host
-  config.vm.network :forwarded_port, guest: 3000, host: 3001
+  config.vm.network :forwarded_port, guest: 3000, host: 3000
 
   # Configure the virtual machine to use 2GB of RAM
   config.vm.provider :virtualbox do |vb|
