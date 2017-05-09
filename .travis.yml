@@ -2,4 +2,9 @@ sudo: false
 language: ruby
 rvm:
   - 2.3.1
-before_install: gem install bundler -v 1.12.5
+services:
+  - postgresql
+before_script:
+  - mkdir -p tmp/cache
+script:
+  - bundle exec rake db:setup spec
