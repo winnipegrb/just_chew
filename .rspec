@@ -1,6 +1,6 @@
 --require spec_helper
+--require turnip/rspec
 --format Fuubar
 --color
--r turnip/rspec
 --tag ~ignore
 --tag focus
