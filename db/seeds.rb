@@ -17,7 +17,7 @@
   if klass.count.zero?
     print "Seeding random #{klass.model_name.plural}"
     options[:count].times do
-      FactoryGirl.create! klass.model_name.singular, options[:attributes]
+      FactoryGirl.create klass.model_name.singular, options[:attributes]
       print '.'
     end
     puts ' Done!'
