@@ -1,0 +1,10 @@
+default: &default
+  adapter:  postgresql
+  encoding: unicode
+  timeout: 5000
+  pool: 5
+  host: localhost
+
+test:
+  <<: *default
+  database: just_chew_test

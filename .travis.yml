@@ -6,5 +6,6 @@ services:
   - postgresql
 before_script:
   - mkdir -p tmp/cache
+  - cp -f config/database.travis.yml config/database.yml
 script:
   - bundle exec rake db:setup spec
