@@ -1,0 +1,7 @@
+.card
+  .card-icon-top
+    = fa_icon card[:icon], class: 'fa-5x'
+  .card-block
+    h4.card-title = card[:title]
+    - if card[:text].present?
+      p.card-text = card[:text]

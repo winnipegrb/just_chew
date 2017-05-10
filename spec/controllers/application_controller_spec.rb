@@ -3,10 +3,13 @@ require 'rails_helper'
 RSpec.describe ApplicationController, type: :controller do
 
   describe "GET #welcome" do
-    it "returns http success" do
-      get :welcome
-      expect(response).to have_http_status(:success)
-    end
-  end
 
+    before { get :welcome }
+
+    it { should respond_with(:success) }
+
+    it { should have_rendered(layout: :application) }
+
+    it { should have_rendered(:welcome) }
+  end
 end
