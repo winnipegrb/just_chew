@@ -3,9 +3,23 @@ header.main
     = link_to root_path, class: 'navbar-brand'
       = image_tag 'logo.png', width: 80, height: 40
     ul.nav.navbar-nav
-      li.nav-item
-        = link_to root_path, class: 'nav-link'
-          | Home
-      li.nav-item.float-xs-right
-        = link_to '#', class: 'nav-link'
-          | Log In
+      .float-xs-left
+        - if signed_in? && ordering?
+          li.nav-item
+            - order_preference_type_toggle_json.tap do |toggle_json|
+              = react_component 'Order.Preference.TypeToggle', json: toggle_json
+      .float-xs-right
+        li.nav-item
+          - if signed_in?
+            = link_to profile_path, class: 'nav-link'
+              span Profile
+          - else
+            = link_to sign_in_path, class: 'nav-link'
+              span Sign in
+        li.nav-item
+          - if signed_in?
+            = link_to sign_out_path, method: :delete, class: 'nav-link'
+              span Sign out
+          - else
+            = link_to sign_up_path, class: 'nav-link'
+              .btn.btn-outline-primary Sign up

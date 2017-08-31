@@ -1,0 +1,11 @@
+#clearance.password-reset
+  h2 = t('.title')
+
+  p = t('.description')
+
+  = simple_form_for :password, url: passwords_path do |f|
+    .form-group
+      = f.input :email
+
+    .form-group
+      = f.button :submit

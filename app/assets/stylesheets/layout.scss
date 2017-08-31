@@ -4,6 +4,10 @@
 
 header.main {
   ul { margin-top: 5px; }
+  .nav-link span {
+    display: block;
+    padding: 5px;
+  }
 }
 
 footer.main {

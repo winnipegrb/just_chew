@@ -1,0 +1,8 @@
+= simple_form_for current_user, url: profile_path do |f|
+  .form-group
+    = f.input :first_name
+    = f.input :last_name
+    = f.input :email
+
+  .form-group
+    = f.button :submit

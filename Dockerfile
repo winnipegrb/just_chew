@@ -7,8 +7,6 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 COPY . .
 RUN bundle install
-RUN bundle exec rake db:migrate
-RUN bundle exec rake db:test:prepare
 
 EXPOSE 3000
 CMD rails server -b 0.0.0.0

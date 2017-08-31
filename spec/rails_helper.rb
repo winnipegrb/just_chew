@@ -12,6 +12,7 @@ require 'factory_girl_rails'
 require 'database_cleaner'
 require 'shoulda/matchers'
 require 'webmock/rspec'
+require 'clearance/rspec'
 
 require 'turnip/capybara'
 require 'capybara/rspec'
@@ -32,10 +33,14 @@ require 'site_prism'
 # directory. Alternatively, in the individual `*_spec.rb` files, manually
 # require only the support files necessary.
 #
-Dir[Rails.root.join('spec/support/pages/**/*.rb')].each   { |f| require f }
-Dir[Rails.root.join('spec/support/steps/**/*.rb')].each   { |f| require f }
-Dir[Rails.root.join('spec/support/helpers/**/*.rb')].each { |f| require f }
-Dir[Rails.root.join('spec/support/*.rb')].each            { |f| require f }
+Dir[Rails.root.join('spec/support/helpers/spec_*.rb')].each    { |f| require f }
+Dir[Rails.root.join('spec/support/helpers/**/*.rb')].each      { |f| require f }
+Dir[Rails.root.join('spec/support/pages/**/*.rb')].each        { |f| require f }
+Dir[Rails.root.join('spec/support/placeholders/**/*.rb')].each { |f| require f }
+Dir[Rails.root.join('spec/support/steps/spec_*.rb')].each      { |f| require f }
+Dir[Rails.root.join('spec/support/steps/**/*.rb')].each        { |f| require f }
+Dir[Rails.root.join('spec/support/matchers/**/*.rb')].each     { |f| require f }
+Dir[Rails.root.join('spec/support/*.rb')].each                 { |f| require f }
 
 # Checks for pending migration and applies them before tests are run.
 # If you are not using ActiveRecord, you can remove this line.

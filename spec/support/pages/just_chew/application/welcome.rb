@@ -2,9 +2,8 @@ require_relative '../application'
 
 module JustChew::Spec::Application::Welcome
 
-  class AddressForm < JustChew::Spec::Section
+  class AddressForm < JustChew::Spec::Form
     element :address, 'input[type="text"]'
-    element :submit,  'input[type="submit"]'
   end
 
   class Banner < JustChew::Spec::Section
@@ -22,8 +21,7 @@ module JustChew::Spec::Application::Welcome
     end
   end
 
-  class Page < JustChew::Spec::Page
-    include JustChew::Spec::Layouts::Application
+  class Page < JustChew::Spec::Application::Page
     set_url %q(/)
 
     section  :banner, Banner, '#main-banner'

@@ -1,0 +1,12 @@
+= simple_form_for @user do |f|
+  .form-group
+    = f.input :first_name
+    = f.input :last_name
+    = f.input :email
+    = f.input :password
+
+  .form-group
+    = f.button :submit
+
+  ul.other-links
+    li = link_to t('.sign_in'), sign_in_path

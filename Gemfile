@@ -4,8 +4,8 @@ ruby '2.3.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# Use PostgreSQL as the database for Active Record
+gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -16,6 +16,18 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 gem 'therubyracer', platforms: :ruby
+# Use clearance for user authentication
+gem 'clearance'
+# Use carrierwave for file uploads
+gem 'carrierwave', '~> 1.0'
+# Use minimagick for image processing
+gem 'mini_magick'
+# Use ActiveModel::Serializers for model JSON serialization
+gem 'active_model_serializers'
+# Use React.js for building view components
+gem 'react-rails'
+# Use js-routes for exposing named route helpers to JS
+gem 'js-routes'
 
 # Use Slim for view templating
 gem 'slim-rails'
@@ -53,6 +65,10 @@ group :development, :test do
   gem 'rails-controller-testing'
   # Timecop allows us to travel through time in our tests
   gem 'timecop'
+  # Faker generates random data for our factories
+  gem 'faker'
+  # FactoryGirl provides easy factory creation and use
+  gem 'factory_girl_rails'
 end
 
 group :development do
@@ -77,10 +93,6 @@ group :development do
 end
 
 group :test do
-  # Faker generates random data for our factories
-  gem 'faker'
-  # FactoryGirl provides easy factory creation and use
-  gem 'factory_girl_rails'
   # Shoulda::Matchers gives us readable matchers for our unit tests
   gem 'shoulda-matchers'
   # DatabaseCleaner cleans up persisted test data between test runs
