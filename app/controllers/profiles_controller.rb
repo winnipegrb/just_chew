@@ -17,6 +17,6 @@ class ProfilesController < ApplicationController
   def user_params
     params.require(
       Clearance.configuration.user_parameter
-    ).permit(Clearance::UsersController::PARAMS)
+    ).permit(UsersController::PARAMS)
   end
 end
