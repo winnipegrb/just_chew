@@ -59,7 +59,7 @@ RSpec.describe Order::PreferencesController, type: :controller do
         end
 
         it 'should render json' do
-          expect(json_response).to eq json
+          expect(response.json).to eq json
         end
       end
 
@@ -84,7 +84,7 @@ RSpec.describe Order::PreferencesController, type: :controller do
         end
 
         it 'should render json' do
-          expect(json_response).to eq json
+          expect(response.json).to eq json
         end
       end
     end
