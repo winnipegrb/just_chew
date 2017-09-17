@@ -1,5 +1,7 @@
-ActionDispatch::TestResponse.class_eval do
+module ParseJsonBody
   def json
     JSON.parse(body)
   end
 end
+
+ActionDispatch::TestResponse.send(:include, ParseJsonBody)
